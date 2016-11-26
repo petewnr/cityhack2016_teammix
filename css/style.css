@@ -24,6 +24,20 @@
   font-size: 15pt;
 }
 
+.backbutton{
+  text-decoration: none;
+  background: #000000;
+  color: #ffffff;
+  font-size: 15pt;
+}
+
+.backbutton.btn:active{
+  text-decoration: none;
+  background: #000000;
+  color: #ffffff;
+  font-size: 15pt;
+}
+
 
 .q1 textarea, .q2 textarea{
   border: 0px;
@@ -36,4 +50,20 @@
 .filter{
   background: white;
   color: black;
+}
+
+.black .label{
+  background-color: white;
+  color: black;
+}
+
+.mySlides{
+  width: 100vw;
+  top:80px;
+  left:0px;
+  position: absolute;
+}
+
+.prompt{
+  margin-bottom: 20px;
 }

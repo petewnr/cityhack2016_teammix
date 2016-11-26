@@ -3,7 +3,8 @@ $(document).ready(function(){
   $(".q2").hide();
   $(".q3").hide();
   $(".prompt").hide();
-
+  $(".slideshow").hide();
+  $(".backbutton").hide();
 
 
   $(".white").click(function(){
@@ -16,6 +17,7 @@ $(document).ready(function(){
 
   });
 
+//next btn
   $(".button1").click(function(event){
     event.stopPropagation();
     $(this).parent().fadeOut(function(){
@@ -42,11 +44,49 @@ $(document).ready(function(){
   });
 
   $(".black").click(function(){
+      $("#about_others").fadeOut();
     $(".white").fadeOut(function(){
-      $("#about_others").hide();
       $(".black").removeClass("col-xs-6");
       $(".black").addClass("col-xs-12");
+      $(".prompt").fadeIn();
+      $(".backbutton").fadeIn();
+
     });
   });
 
+//backbutton
+
+$(".backbutton").click(function(event){
+    event.stopPropagation();
+    $(".backbutton").fadeOut();
+    $(".slideshow").fadeOut();
+    $(".prompt").fadeOut(function(){
+    $("#about_others").fadeIn();
+    $(".prompt").fadeOut();
+    $(".black").removeClass("col-xs-12");
+    $(".black").addClass("col-xs-6");
+    $(".white").fadeIn();
+  });
+
+});
+  //Slideshow
+
+  $(".tags").click(function(){
+    $(".slideshow").fadeIn();
+
+  });
+  var slideIndex = 0;
+  carousel();
+
+  function carousel() {
+      var i;
+      var x = document.getElementsByClassName("mySlides");
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+      }
+      slideIndex++;
+      if (slideIndex > x.length) {slideIndex = 1}
+      x[slideIndex-1].style.display = "block";
+      setTimeout(carousel, 2000); // Change image every 2 seconds
+  }
 });
