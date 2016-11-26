@@ -1,0 +1,39 @@
+.container-fluid{
+  padding:0;
+}
+
+.vcenter {
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
+}
+
+.black{
+  background: #000000;
+  color: #ffffff;
+}
+
+.black, .white{
+  height:100vh;
+  padding-top: 40vh;
+}
+
+.nextbtn{
+  text-decoration: none;
+  color: #000000;
+  font-size: 15pt;
+}
+
+
+.q1 textarea, .q2 textarea{
+  border: 0px;
+  border-bottom: 2px solid #000000;
+  resize: none;
+  margin-bottom: 20px;
+
+}
+
+.filter{
+  background: white;
+  color: black;
+}
