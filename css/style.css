@@ -59,9 +59,15 @@
 
 .mySlides{
   width: 100vw;
-  top:80px;
+  top:40px;
   left:0px;
   position: absolute;
+}
+
+.mySlides h1, .mySlides p{
+  position: absolute;
+  color: white;
+  padding:10px;
 }
 
 .prompt{
