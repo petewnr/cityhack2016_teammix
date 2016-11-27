@@ -8,6 +8,11 @@ $(document).ready(function(){
 
   var flag = true;
 
+  var descText ="";
+  var identity = "";
+  var imgName = "";
+  var value={};
+
   $(".youClick").click(function(){
     if (flag){
     $(".black").fadeOut(function(){
@@ -27,6 +32,7 @@ $(document).ready(function(){
     $(this).parent().fadeOut(function(){
         $(".q2").fadeIn();
     });
+    descText = $(".q1 textarea").value();
   });
 
   $(".button2").click(function(event){
@@ -34,6 +40,7 @@ $(document).ready(function(){
     $(this).parent().fadeOut(function(){
         $(".q3").fadeIn();
     });
+    identity = $(".q2 textarea").value();
   });
 
   $(".button3").click(function(event){
@@ -47,6 +54,10 @@ $(document).ready(function(){
     });
     flag=true;
     document.getElementById('output').removeAttribute('src');
+
+    //largest img id + 1 =imgName
+
+    value={"expereince":descText,"identity":identity, "img_id":imgName}
   });
 
   $(".black").click(function(){
