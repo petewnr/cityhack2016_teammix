@@ -58,7 +58,7 @@ $(document).ready(function(){
 
     //largest img id + 1 =imgName
 
-    value={"experience":descText,"identity":identity, "probe_id":1,"datadate":$.now()};
+    value={"experience":descText,"identity":identity, "probe_id":1,"datadate":new Date($.now())};
     console.log(value);
     value=$.parseJSON(value);
 
