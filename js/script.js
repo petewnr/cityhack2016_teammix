@@ -6,15 +6,18 @@ $(document).ready(function(){
   $(".slideshow").hide();
   $(".backbutton").hide();
 
+  var flag = true;
 
   $(".youClick").click(function(){
+    if (flag){
     $(".black").fadeOut(function(){
       $("#about_you").hide();
       $(".q1").fadeIn();
       $(".youClick").removeClass("col-xs-6");
-      $(".youClick").removeID("about_you");
       $(".youClick").addClass("col-xs-12");
     });
+    flag=false;
+  }
 
   });
 
@@ -35,20 +38,20 @@ $(document).ready(function(){
 
   $(".button3").click(function(event){
     event.stopPropagation();
-    $(this).parent().fadeOut(function(){
+    $(".q3").fadeOut(function(){
       $("#about_you").fadeIn();
       $(".white").removeClass("col-xs-12");
       $(".white").addClass("col-xs-6");
       $(".black").fadeIn();
 
     });
+    flag=true;
   });
 
   $(".black").click(function(){
       $("#about_others").fadeOut();
     $(".white").fadeOut(function(){
       $(".black").removeClass("col-xs-6");
-      $(".black").removeClass("black");
       $(".black").addClass("col-xs-12");
       $(".prompt").fadeIn();
       $(".backbutton").fadeIn();
@@ -67,6 +70,8 @@ $(".backbutton").click(function(event){
     $(".prompt").fadeOut();
     $(".black").removeClass("col-xs-12");
     $(".black").addClass("col-xs-6");
+    $(".white").fadeIn();
+
   });
 
 });
