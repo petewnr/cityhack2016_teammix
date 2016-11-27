@@ -58,8 +58,22 @@ $(document).ready(function(){
 
     //largest img id + 1 =imgName
 
-    value={"expereince":descText,"identity":identity, "img_id":imgName}
+    value={"experience":descText,"identity":identity, "probe_id":1,"datadate":$.now()};
+    console.log(value);
+    value=$.parseJSON(value);
+
+    $.ajax({
+      type: "POST",
+      url: "http://13.54.61.35:8080/api/probedata/",
+      data: value,
+      success: function(){
+        console.log("done");
+      },
+      dataType: "json"
+    });
+
     // send value to database
+
   });
 
   $(".black").click(function(){
