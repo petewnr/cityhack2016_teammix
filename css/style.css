@@ -72,6 +72,10 @@
   position: absolute;
 }
 
+.slide{
+  width:100vw;
+}
+
 .mySlides h1, .mySlides p{
   position: absolute;
   color: white;
