@@ -86,18 +86,24 @@
   margin-bottom: 20px;
 }
 
+.red{
+  background: red;
+}
 /*camera styling*/
 #output{
   width:50%;
+
 }
-.submitBtn{
+.button3{
   opacity: 0;
+  margin-top: 3em;
+  margin-bottom: 3em;
 }
 .c3{
   position: absolute;
 }
-.cameraButton{
-  opacity: 1;
+#cameraButton{
+  opacity: 0;
 }
 label {
   display: inline-block;
@@ -121,13 +127,13 @@ input,
   width: 150px;
   margin: 0;
   left: 0;
-  position: relative;;
+  position: relative;
 }
 [type=file] + label {
   text-align: center;
   /*left: 7.35em;
   top: 0.5em;*/
-  position: relative;;
+  position: absolute;
   margin: auto;
 
   /* Decorative */

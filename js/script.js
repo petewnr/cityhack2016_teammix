@@ -43,9 +43,10 @@ $(document).ready(function(){
       $(".white").removeClass("col-xs-12");
       $(".white").addClass("col-xs-6");
       $(".black").fadeIn();
-
+      $(".button3").css("opacity",0);
     });
     flag=true;
+    document.getElementById('output').removeAttribute('src');
   });
 
   $(".black").click(function(){
@@ -101,6 +102,6 @@ $(".backbutton").click(function(event){
 var loadFile = function(event) {
   var output = document.getElementById('output');
   output.src = URL.createObjectURL(event.target.files[0]);
-  $(".submitBtn").css("opacity",1);
+  $(".button3").css("opacity",1);
   $(".cameraButton").css("opacity",0);
 };
