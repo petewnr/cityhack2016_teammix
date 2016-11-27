@@ -58,6 +58,7 @@ $(document).ready(function(){
     //largest img id + 1 =imgName
 
     value={"expereince":descText,"identity":identity, "img_id":imgName}
+    // send value to database
   });
 
   $(".black").click(function(){
