@@ -77,13 +77,13 @@
       </div>
       <div class="q3">
         <h1 class="text-center col-xs-12">take a picture:)</h1>
-        <div class="imageCapture"></>
-        <input type="file" accept="image/*" capture="camera" id="cameraButton" placeholder="Capture Image" />
+        <img id="output"/>
+        <input type="file" accept="image/*" capture="camera" id="cameraButton" placeholder="Capture Image"  onchange="loadFile(event)"/>
         <label for ="cameraButton" class="col-xs-2 col-xs-offset-5"> Capture Image </label>
         <!--<button type="button" class="button3 btn btn-default btn-lg col-xs-2 col-xs-offset-5">Next
           <span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span>
         </button>-->
-        <button type="button" class="button2 btn btn-default btn-lg col-xs-2 col-xs-offset-5">Submit
+        <button type="button" class="submitBtn btn btn-default btn-lg col-xs-2 col-xs-offset-5">Submit
           <span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span>
         </button>
       </div>

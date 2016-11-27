@@ -91,3 +91,11 @@ $(".backbutton").click(function(event){
       setTimeout(carousel, 2000); // Change image every 2 seconds
   }
 });
+
+//camera function
+var loadFile = function(event) {
+  var output = document.getElementById('output');
+  output.src = URL.createObjectURL(event.target.files[0]);
+  $(".submitBtn").css("opacity",1);
+  $(".cameraButton").css("opacity",0);
+};

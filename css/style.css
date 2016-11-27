@@ -83,8 +83,17 @@
 }
 
 /*camera styling*/
+#output{
+  width:50%;
+}
+.submitBtn{
+  opacity: 0;
+}
 .c3{
   position: absolute;
+}
+.cameraButton{
+  opacity: 1;
 }
 label {
   display: inline-block;
