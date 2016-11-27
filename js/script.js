@@ -32,7 +32,7 @@ $(document).ready(function(){
     $(this).parent().fadeOut(function(){
         $(".q2").fadeIn();
     });
-    descText = $(".q1 textarea").value();
+    descText = $(".q1 textarea").val();
   });
 
   $(".button2").click(function(event){
@@ -40,7 +40,7 @@ $(document).ready(function(){
     $(this).parent().fadeOut(function(){
         $(".q3").fadeIn();
     });
-    identity = $(".q2 textarea").value();
+    identity = $(".q2 textarea").val();
   });
 
   $(".button3").click(function(event){
