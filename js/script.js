@@ -43,7 +43,8 @@ $(document).ready(function(){
       $(".white").removeClass("col-xs-12");
       $(".white").addClass("col-xs-6");
       $(".black").fadeIn();
-      $(".button3").css("opacity",0);
+      $(".button3").css("display",'none');
+      $(".capture").css("display",'inline-block');
     });
     flag=true;
     document.getElementById('output').removeAttribute('src');
@@ -102,6 +103,6 @@ $(".backbutton").click(function(event){
 var loadFile = function(event) {
   var output = document.getElementById('output');
   output.src = URL.createObjectURL(event.target.files[0]);
-  $(".button3").css("opacity",1);
-  $(".cameraButton").css("opacity",0);
+  $(".button3").css("display",'inline-block');
+  $(".capture").css("display",'none');
 };
