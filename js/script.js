@@ -7,12 +7,13 @@ $(document).ready(function(){
   $(".backbutton").hide();
 
 
-  $(".white").click(function(){
+  $(".youClick").click(function(){
     $(".black").fadeOut(function(){
       $("#about_you").hide();
       $(".q1").fadeIn();
-      $(".white").removeClass("col-xs-6");
-      $(".white").addClass("col-xs-12");
+      $(".youClick").removeClass("col-xs-6");
+      $(".youClick").removeID("about_you");
+      $(".youClick").addClass("col-xs-12");
     });
 
   });
@@ -47,6 +48,7 @@ $(document).ready(function(){
       $("#about_others").fadeOut();
     $(".white").fadeOut(function(){
       $(".black").removeClass("col-xs-6");
+      $(".black").removeClass("black");
       $(".black").addClass("col-xs-12");
       $(".prompt").fadeIn();
       $(".backbutton").fadeIn();
@@ -65,7 +67,6 @@ $(".backbutton").click(function(event){
     $(".prompt").fadeOut();
     $(".black").removeClass("col-xs-12");
     $(".black").addClass("col-xs-6");
-    $(".white").fadeIn();
   });
 
 });
